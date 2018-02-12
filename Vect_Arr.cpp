@@ -8,8 +8,8 @@ class Array{
             cout<<"Welcome to cpp choose the options";
             cout<<"1.insert,2.Delete,3.Append,4.Rotate";
         cin>>x;
-
-        
+               //x gets the value for Menu driver
+               //insert,delete,append,rotation
        switch(x){
        case 1:
             cout<<"Enter the size of the Array";
@@ -86,7 +86,7 @@ class Array{
                     }
                     break;
                     default:
-                    cout<<"Choose other than 1,2,3,4";
+                    cout<<"Don't Choose other than 1,2,3,4";
                     break;
 
         }
