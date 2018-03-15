@@ -1,42 +1,46 @@
 import java.util.*;
-class link
-{
-    node head;
-    public class node{
-        int data;
-        node next;
-
-        node(int d)
-        {
-            data=d;
-            next=null;
-        }
-    }
-
-    public void  push(int new_data)
+import java.io.*;
+class Array{
+    private int Size;
+    private int[] array;
+    public Array(int[] arraycopy)
     {
-        //idula na new_node nu ona allocate pani aduku new data assign pandran
-        node new_node = new node(new_data);
-        //new node oda next value head aganum eg:1,2 na ans:2,1
-        new_node.next=head;
-        //move the head point to new_node
-        head= new_node;
+        array=arraycopy;
     }
-
-    public void printList(){
-        node n = head;
-        while(n!=null)
-        {
-            System.out.print(n.data+" ");
-            n = n.next;
-        }
+    public int Size(int n)
+    {
+        Size=n;
     }
-
+    public int[] getvalue()
+    {
+        return array;
+    }
+    public int Sizevalue()
+    {
+        return Size;
+    }
+}
+public class link{
     public static void main(String args[])
     {
-        LinkedList links = new LinkedList();
-        links.push(1);
-        links.push(2);
-        links.printList();
+        Scanner scan = new Scanner(System.in);
+        Array obj = new Array();
+        int i;
+        System.out.println("Enter the size of the array");
+        int n = scan.nextInt();
+        obj.size(n);
+        int[] array = new int[10];
+        for(i=0;i<n;i++)
+        {
+            array[i]=scan.nextInt();
+        }
+        Array obj1 = new Array(array);
+        obj1.getvalue();
+        array=null;
+        for(int j: array)
+        {
+            System.out.println(j);
+        }
+
     }
 }
